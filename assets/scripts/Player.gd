@@ -30,13 +30,11 @@ func _physics_process(delta):
 	else:
 		rotation_degrees += DEGREE_BY_WHICH_TO_ROTATE
 		
-
 	motion = move_and_slide(motion, UP)
 	
 	
 	# checking for collisions
-	for i in get_slide_count():
-		var collision = get_slide_collision(i)
-		print("Collided with: ", collision.collider.name)
+	if get_slide_count() > 0:
+		get_tree().current_scene.changeSceneWithFilePath("res://assets/scenes/GameOver.tscn")
 
 
