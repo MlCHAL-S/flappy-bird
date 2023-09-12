@@ -23,3 +23,6 @@ func _physics_process(delta):
 	for wall in spawned_walls:
 		if wall.position.y < -1000:
 			wall.queue_free()
+			
+	
+
